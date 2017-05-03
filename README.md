@@ -14,9 +14,9 @@ Summary: Highly-optimized, pure-python HTTP server
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cheroot-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cheroot-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cheroot-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cheroot-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cheroot-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cheroot-feedstock/branch/master)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tmpy4r6vp82-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tmpy4r6vp82-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/tmpy4r6vp82-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tmpy4r6vp82-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tmpy4r6vp82-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tmpy4r6vp82-feedstock/branch/master)
 
 Current release info
 ====================
