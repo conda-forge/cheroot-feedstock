@@ -1,17 +1,17 @@
-{%set name = "Cheroot" %}
-{%set version = "5.7.0" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash = "32146a96ec747510a29ff23dc28c2c36b376526eaf492c63463f22ee804ed7c2" %}
-{%set build = 0 %}
+{% set name = "Cheroot" %}
+{% set version = "5.7.0" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "32146a96ec747510a29ff23dc28c2c36b376526eaf492c63463f22ee804ed7c2" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name|lower }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.{{ compress_type }}
+  fn: {{ name|lower }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
