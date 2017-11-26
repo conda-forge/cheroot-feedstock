@@ -1,8 +1,8 @@
 {% set name = "Cheroot" %}
-{% set version = "5.8.3" %}
+{% set version = "5.10.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "5c0531fd732700b1fb3e6e7079dc3aefbdf29e9136925633d93f009cb87d70a3" %}
+{% set hash = "a408f1b80a3f93a3b49fc330f68eea40d8d30b9b07084f374607d1a5cc2e824f" %}
 {% set build = 0 %}
 
 package:
@@ -26,19 +26,20 @@ requirements:
 
   run:
     - python
-    - six
+    - six >=1.11.0
 
 test:
   imports:
     - cheroot
+    - cheroot.ssl
     - cheroot.test
-
+    - cheroot.workers
 
 about:
   home: http://www.cherrypy.org
   license: BSD 3-Clause
   license_family: BSD
-  license_file: LICENSE.md
+  license_file: LICENSE
   summary: 'Highly-optimized, pure-python HTTP server'
   dev_url: https://github.com/cherrypy/cheroot
   doc_url: http://www.cherrypy.org
