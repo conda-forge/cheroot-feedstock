@@ -17,16 +17,19 @@ source:
 build:
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
 
 requirements:
   build:
     - python
     - setuptools
     - setuptools_scm >=1.15.0
+    - setuptools_scm_git_archive >=1.0
 
   run:
     - python
-    - six
+    - six >=1.11.0
+    - more_itertools >=2.6
 
 test:
   imports:
@@ -41,7 +44,7 @@ about:
   license_file: LICENSE.md
   summary: 'Highly-optimized, pure-python HTTP server'
   dev_url: https://github.com/cherrypy/cheroot
-  doc_url: http://www.cherrypy.org
+  doc_url: https://cheroot.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
