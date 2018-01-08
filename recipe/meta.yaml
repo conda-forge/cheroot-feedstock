@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     - six >=1.11.0
-    - more_itertools >=2.6
+    - more-itertools >=2.6
 
 test:
   imports:
