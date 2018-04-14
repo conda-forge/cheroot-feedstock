@@ -1,8 +1,8 @@
 {% set name = "Cheroot" %}
-{% set version = "6.0.0" %}
+{% set version = "6.2.2" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "ba474e5149b03fabc2bba2d0b490b4d95443894d45b1430b799dccea3b3f4683" %}
+{% set hash = "f50723330f84898fdc16a945689ac6038b137f84f44d20bc4702a1a02171bad4" %}
 {% set build = 0 %}
 
 package:
@@ -15,7 +15,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   noarch: python
 
