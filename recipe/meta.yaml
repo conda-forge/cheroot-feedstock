@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "1850e7278eba13756b8401a81b01a6ad793d3c67c497c49efa73d452e9396ecf" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -11,18 +10,17 @@ package:
 
 source:
   fn: {{ name|lower }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
-  noarch: python
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - setuptools_scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
 
@@ -30,6 +28,7 @@ requirements:
     - python
     - six >=1.11.0
     - more-itertools >=2.6
+    - backports.functools_lru_cache  # [py2k]
 
 test:
   imports:
