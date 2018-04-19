@@ -1,8 +1,8 @@
 {% set name = "Cheroot" %}
-{% set version = "6.2.3" %}
+{% set version = "6.2.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "1850e7278eba13756b8401a81b01a6ad793d3c67c497c49efa73d452e9396ecf" %}
+{% set hash = "9997623a88400fd41706978adcfbeceee1fe0202a886228e471a58263b643fef" %}
 
 package:
   name: {{ name|lower }}
