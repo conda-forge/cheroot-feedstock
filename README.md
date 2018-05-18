@@ -20,10 +20,10 @@ Current build status
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-cheroot-green.svg)](https://anaconda.org/conda-forge/cheroot)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cheroot.svg)](https://anaconda.org/conda-forge/cheroot)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/cheroot.svg)](https://anaconda.org/conda-forge/cheroot)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cheroot.svg)](https://anaconda.org/conda-forge/cheroot)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cheroot-green.svg)](https://anaconda.org/conda-forge/cheroot) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cheroot.svg)](https://anaconda.org/conda-forge/cheroot) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cheroot.svg)](https://anaconda.org/conda-forge/cheroot) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cheroot.svg)](https://anaconda.org/conda-forge/cheroot) |
 
 Installing cheroot
 ==================
