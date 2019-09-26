@@ -1,8 +1,8 @@
 {% set name = "Cheroot" %}
-{% set version = "6.5.5" %}
+{% set version = "6.6.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "f6a85e005adb5bc5f3a92b998ff0e48795d4d98a0fbb7edde47a7513d4100601" %}
+{% set hash = "c4e1215e02fc95febcef3033cacd2a7d6be320a0206976f7e254fc9b216ada1b" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
