@@ -1,30 +1,25 @@
 {% set name = "Cheroot" %}
 {% set version = "6.5.5" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "f6a85e005adb5bc5f3a92b998ff0e48795d4d98a0fbb7edde47a7513d4100601" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name|lower }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f6a85e005adb5bc5f3a92b998ff0e48795d4d98a0fbb7edde47a7513d4100601
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools_scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
-
   run:
     - python
     - six >=1.11.0
@@ -35,7 +30,6 @@ test:
   imports:
     - cheroot
     - cheroot.test
-
 
 about:
   home: http://www.cherrypy.org
