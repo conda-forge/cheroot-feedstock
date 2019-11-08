@@ -15,9 +15,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    
-    <td>All platforms:</td>
+<table><tr><td>All platforms:</td>
     <td>
       <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2804&branchName=master">
         <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cheroot-feedstock?branchName=master">
@@ -118,5 +116,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@carlodri](https://github.com/carlodri/)
 * [@pmlandwehr](https://github.com/pmlandwehr/)
 
