@@ -1,5 +1,5 @@
 {% set name = "Cheroot" %}
-{% set version = "6.5.5" %}
+{% set version = "8.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: f6a85e005adb5bc5f3a92b998ff0e48795d4d98a0fbb7edde47a7513d4100601
+  sha256: 5b525b3e4a755adf78070ab54c1821fb860d4255a9317dba2b88eb2df2441cff
 
 build:
-  noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
+  entry_points:
+    - cheroot = cheroot.cli:main
 
 requirements:
   host:
@@ -24,12 +25,14 @@ requirements:
     - python
     - six >=1.11.0
     - more-itertools >=2.6
-    - backports.functools_lru_cache
+    - backports.functools_lru_cache  # [py<33]
 
 test:
   imports:
     - cheroot
     - cheroot.test
+  commands:
+    - cheroot
 
 about:
   home: http://www.cherrypy.org
