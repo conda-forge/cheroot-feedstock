@@ -33,7 +33,7 @@ test:
     - cheroot
     - cheroot.test
   commands:
-    - cheroot
+    - cheroot -h
 
 about:
   home: http://www.cherrypy.org
