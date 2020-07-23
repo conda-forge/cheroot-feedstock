@@ -25,6 +25,7 @@ requirements:
     - python
     - six >=1.11.0
     - more-itertools >=2.6
+    - selectors2  # [py<34]
     - backports.functools_lru_cache  # [py<33]
     - jaraco.functools
 
