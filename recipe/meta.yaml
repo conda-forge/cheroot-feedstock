@@ -1,5 +1,5 @@
 {% set name = "Cheroot" %}
-{% set version = "8.3.0" %}
+{% set version = "8.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: a0577e1f28661727d472671a7cc4e0c12ea0cbc5220265e70f00a8b8cb628931
+  sha256: 2cab51836f57e340746245eb59dba652428b398fc24f5b2ee75e6671a2cc2a8d
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cheroot = cheroot.cli:main
 
@@ -24,6 +24,7 @@ requirements:
   run:
     - python
     - six >=1.11.0
+    - selectors2  # [py<34]
     - more-itertools >=2.6
     - backports.functools_lru_cache  # [py<33]
     - jaraco.functools
@@ -40,7 +41,7 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE.md
-  summary: 'Highly-optimized, pure-python HTTP server'
+  summary: Highly-optimized, pure-python HTTP server
   dev_url: https://github.com/cherrypy/cheroot
   doc_url: https://cheroot.readthedocs.io/en/latest/
 
