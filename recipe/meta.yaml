@@ -1,5 +1,5 @@
 {% set name = "Cheroot" %}
-{% set version = "8.4.2" %}
+{% set version = "8.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 2cab51836f57e340746245eb59dba652428b398fc24f5b2ee75e6671a2cc2a8d
+  sha256: ca92669cc90fbd0920fda1ebcc431147e7d3ae6887216ce404f85f1b3133fa93
 
 build:
   number: 0
