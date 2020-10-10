@@ -10,7 +10,7 @@ source:
   sha256: b6c18caf5f79cdae668c35fc8309fc88ea4a964cce9e2ca8504fab13bcf57301
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cheroot = cheroot.cli:main
