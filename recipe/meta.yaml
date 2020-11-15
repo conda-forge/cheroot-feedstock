@@ -1,5 +1,5 @@
 {% set name = "Cheroot" %}
-{% set version = "8.4.5" %}
+{% set version = "8.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: b6c18caf5f79cdae668c35fc8309fc88ea4a964cce9e2ca8504fab13bcf57301
+  sha256: d6916161519682c1c7d85c569d6ad3c8bddbedc969fc49676897549a29c92752
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cheroot = cheroot.cli:main
