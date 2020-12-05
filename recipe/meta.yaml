@@ -37,7 +37,7 @@ test:
 
 about:
   home: http://www.cherrypy.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
   summary: Highly-optimized, pure-python HTTP server
