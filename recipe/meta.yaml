@@ -1,5 +1,5 @@
 {% set name = "Cheroot" %}
-{% set version = "8.4.8" %}
+{% set version = "8.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 1089c28a9c320d19fdf9a4b0ed6ace23a0948db1c171a36ac985f3741bc62865
+  sha256: 199ce39e4a119072fc17c8173ad5f3b40e0b00a68ee67316f1c6ec82275dd36e
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -17,16 +18,14 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools_scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
   run:
-    - python
+    - python >=3.6
     - six >=1.11.0
-    - selectors2  # [py<34]
     - more-itertools >=2.6
-    - backports.functools_lru_cache  # [py<33]
     - jaraco.functools
 
 test:
@@ -38,7 +37,7 @@ test:
 
 about:
   home: http://www.cherrypy.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
   summary: Highly-optimized, pure-python HTTP server
