@@ -10,6 +10,7 @@ source:
   sha256: 199ce39e4a119072fc17c8173ad5f3b40e0b00a68ee67316f1c6ec82275dd36e
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -17,16 +18,14 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools_scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
   run:
-    - python
+    - python >=3.6
     - six >=1.11.0
-    - selectors2  # [py<34]
     - more-itertools >=2.6
-    - backports.functools_lru_cache  # [py<33]
     - jaraco.functools
 
 test:
