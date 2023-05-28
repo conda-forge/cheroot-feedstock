@@ -36,13 +36,13 @@ test:
     - cheroot -h
 
 about:
-  home: http://www.cherrypy.org
+  home: https://cheroot.cherrypy.dev
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
   summary: Highly-optimized, pure-python HTTP server
   dev_url: https://github.com/cherrypy/cheroot
-  doc_url: https://cheroot.readthedocs.io/en/latest/
+  doc_url: https://cheroot.cherrypy.dev
 
 extra:
   recipe-maintainers:
