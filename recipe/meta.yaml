@@ -1,5 +1,5 @@
 {% set name = "Cheroot" %}
-{% set version = "9.0.0" %}
+{% set version = "10.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 3d47ad9ee19ecbec144b4758399036692fdbf67a40b96eef1fb1454367b3d338
+  sha256: 59c4a1877fef9969b3c3c080caaaf377e2780919437853fc0d32a9df40b311f0
 
 build:
   noarch: python
@@ -36,13 +36,13 @@ test:
     - cheroot -h
 
 about:
-  home: http://www.cherrypy.org
+  home: https://cheroot.cherrypy.dev
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
   summary: Highly-optimized, pure-python HTTP server
   dev_url: https://github.com/cherrypy/cheroot
-  doc_url: https://cheroot.readthedocs.io/en/latest/
+  doc_url: https://cheroot.cherrypy.dev
 
 extra:
   recipe-maintainers:
