@@ -6,29 +6,31 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
   sha256: e0b82f797658d26b8613ec8eb563c3b08e6bd6a7921e9d5089bd1175ad1b1740
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cheroot = cheroot.cli:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools_scm >=7.0.0
     - setuptools_scm_git_archive >=1.0
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - six >=1.11.0
     - more-itertools >=2.6
     - jaraco.functools
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cheroot
     - cheroot.test
