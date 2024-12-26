@@ -22,6 +22,7 @@ requirements:
     - pip
     - setuptools_scm >=7.0.0
     - setuptools_scm_git_archive >=1.0
+    - setuptools
   run:
     - python >={{ python_min }}
     - six >=1.11.0
