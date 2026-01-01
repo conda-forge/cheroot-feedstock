@@ -3,7 +3,7 @@ About cheroot-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cheroot-feedstock/blob/main/LICENSE.txt)
 
-Home: https://cheroot.cherrypy.dev
+Home: https://cheroot.cherrypy.dev/
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: Highly-optimized, pure-python HTTP server
 
 Development: https://github.com/cherrypy/cheroot
 
-Documentation: https://cheroot.cherrypy.dev
+Documentation: https://cheroot.cherrypy.dev/
 
 Current build status
 ====================

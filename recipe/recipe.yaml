@@ -1,0 +1,59 @@
+schema_version: 1
+
+context:
+  name: Cheroot
+  version: 11.1.2
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0]|lower }}/${{ name|lower }}/${{ name|lower }}-${{ version }}.tar.gz
+  sha256: bfb70c49663f63b0440f2b54dbc6b0d1650e56dfe4e2641f59b2c6f727b44aca
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - cheroot = cheroot.cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools_scm >=7.0.0
+    - setuptools_scm_git_archive >=1.0
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - six >=1.11.0
+    - more-itertools >=2.6
+    - jaraco.functools
+
+tests:
+  - python:
+      imports:
+        - cheroot
+        - cheroot.test
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - cheroot -h
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE.md
+  summary: Highly-optimized, pure-python HTTP server
+  homepage: https://cheroot.cherrypy.dev
+  repository: https://github.com/cherrypy/cheroot
+  documentation: https://cheroot.cherrypy.dev
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - carlodri
